@@ -8,10 +8,6 @@ const Main: React.FC = () => {
     <S.Main>
       <S.Container>
         <S.TopArea>
-          <S.Circle w={3.5} h={3.5} t={7.5} l={3.2}></S.Circle>
-          <S.Circle w={1.3} h={1.3} t={11} l={2}></S.Circle>
-          <S.Circle w={1.3} h={1.3} t={10} l={34}></S.Circle>
-          <S.Circle w={4} h={4} t={11} l={29.5}></S.Circle>
           <S.TopBackgroudPurpleArea></S.TopBackgroudPurpleArea>
           <S.LogoCat src="logo-cat.png" />
           <S.GameJamLogo src="namelogo.jpg"></S.GameJamLogo>
