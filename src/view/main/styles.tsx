@@ -18,7 +18,72 @@ export const Container = styled.div`
   align-items: center;
 `;
 
+export const TopArea = styled.div`
+  z-index: 100;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: 100%;
+  background-color: ${THEME.topDark};
+
+  border-bottom-left-radius: 5rem;
+  border-bottom-right-radius: 5rem;
+  color: white;
+
+  padding-bottom: 4.5rem;
+`;
+
+export const TopBackgroudPurpleArea = styled.div`
+  width: 85%;
+  height: 10rem;
+  background-color: ${THEME.topPurple};
+
+  border-radius: 5rem;
+`;
+
+export const LogoCat = styled.img`
+  width: 10rem;
+
+  margin-top: -8.2rem;
+`;
+
+export const GameJamLogo = styled.img`
+  position: absolute;
+
+  top: 12rem;
+  width: 25rem;
+
+  border-radius: 0.5rem;
+  border: 0.5rem solid ${THEME.topDark};
+`;
+
+interface CircleProps {
+  w: number;
+  h: number;
+  t: number;
+  l: number;
+}
+
+export const Circle = styled.div<CircleProps>`
+  z-index: 200;
+
+  position: absolute;
+  border-radius: 50%;
+  background-color: ${THEME.topCircle};
+
+  width: ${(props) => `${props.w}rem`};
+  height: ${(props) => `${props.h}rem`};
+  top: ${(props) => `${props.t}rem`};
+  left: ${(props) => `${props.l}rem`};
+`;
+
 export const InnerBox = styled.div`
+  position: relative;
+
   min-width: 34rem;
   width: 95%;
   height: 95%;
@@ -33,6 +98,10 @@ export const InnerBox = styled.div`
   padding-bottom: 1rem;
 
   background-color: ${THEME.body};
+
+  /**분리되는 영역을 분리되지 않게끔 보이게 하기 위해 추가 */
+  padding-top: 4rem;
+  margin-top: -1rem;
 `;
 
 export const SloganContainer = styled.div`

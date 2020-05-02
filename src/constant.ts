@@ -13,4 +13,5 @@ export const FONT_COLOR = {
   place: "#d04232",
   theme: "#a61a1d",
   personnel: "#a01828",
+  shadow: "#926d53",
 };
