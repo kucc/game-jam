@@ -1,7 +1,14 @@
 import React from "react";
 
+import Layout from "./component/Layout";
+import Main from "./view/main";
+
 function App() {
-  return <div></div>;
+  return (
+    <Layout>
+      <Main />
+    </Layout>
+  );
 }
 
 export default App;
