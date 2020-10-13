@@ -20,4 +20,15 @@ export const Container = styled.div`
   align-items: center;
 
   font-size: 1.5rem;
+  color: ${THEME.topDark};
 `;
+
+export const NickName = styled.a`
+  text-decoration: none;
+  color: ${THEME.topDark};
+  cursor: pointer;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+`
+
+export const NickNameContainer = styled.div``;
