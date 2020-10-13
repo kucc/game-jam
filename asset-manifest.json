@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/game-jam/static/js/main.9bf88621.chunk.js",
-    "main.js.map": "/game-jam/static/js/main.9bf88621.chunk.js.map",
+    "main.js": "/game-jam/static/js/main.78a2c4de.chunk.js",
+    "main.js.map": "/game-jam/static/js/main.78a2c4de.chunk.js.map",
     "runtime-main.js": "/game-jam/static/js/runtime-main.e2a07918.js",
     "runtime-main.js.map": "/game-jam/static/js/runtime-main.e2a07918.js.map",
     "static/js/2.f593cfb0.chunk.js": "/game-jam/static/js/2.f593cfb0.chunk.js",
     "static/js/2.f593cfb0.chunk.js.map": "/game-jam/static/js/2.f593cfb0.chunk.js.map",
     "index.html": "/game-jam/index.html",
-    "precache-manifest.d15d4e53a730e65c77fe6802ec050edd.js": "/game-jam/precache-manifest.d15d4e53a730e65c77fe6802ec050edd.js",
+    "precache-manifest.c7d60346b89ef38a892aad7e19e234dd.js": "/game-jam/precache-manifest.c7d60346b89ef38a892aad7e19e234dd.js",
     "service-worker.js": "/game-jam/service-worker.js",
     "static/js/2.f593cfb0.chunk.js.LICENSE.txt": "/game-jam/static/js/2.f593cfb0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.e2a07918.js",
     "static/js/2.f593cfb0.chunk.js",
-    "static/js/main.9bf88621.chunk.js"
+    "static/js/main.78a2c4de.chunk.js"
   ]
 }
