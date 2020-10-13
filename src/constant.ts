@@ -6,6 +6,8 @@ export const THEME = {
   topCircle: "#3c0f23",
   body: "#cfa076",
   bottom: "#d7ad7d",
+  theme: "#a61a1d",
+  personnel: "#a01828",
 };
 
 export const FONT_COLOR = {

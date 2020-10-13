@@ -1,5 +1,5 @@
 import styled from "styled-components/macro";
-import { THEME } from "../../constant";
+import { THEME,BREAKPOINT } from "../../constant";
 
 export const Main = styled.div`
   height: 100%;
@@ -83,32 +83,18 @@ export const Circle = styled.div<CircleProps>`
 
 export const InnerBox = styled.div`
   position: relative;
-
-  min-width: 34rem;
-  width: 95%;
-  height: 95%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  border-bottom-left-radius: 4rem;
-  border-bottom-right-radius: 4rem;
-  padding-bottom: 1rem;
-
-  background-color: ${THEME.body};
-
-  /**분리되는 영역을 분리되지 않게끔 보이게 하기 위해 추가 */
   padding-top: 4rem;
-  margin-top: -1rem;
 `;
 
 export const SloganContainer = styled.div`
   display: flex;
   flex-direction: column;
 
-  margin-bottom: 2rem;
+margin-bottom: 2rem;
 `;
 
 export const Slogan = styled.div`
@@ -117,17 +103,48 @@ export const Slogan = styled.div`
 `;
 
 export const ContentContainer = styled.div`
+  width: 100%;
   display: flex;
   flex-direction: column;
-
   align-items: center;
+  
+  @media screen and (min-width: ${BREAKPOINT}px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-top: 2rem;
+  }
 `;
 
 interface ContentBoxProps {
   color?: string;
 }
 
-export const ContentBoxContainer = styled.div``;
+export const FlexContainer = styled.div`
+  width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 3rem;
+  background-color: ${THEME.body};
+  
+  @media screen and (min-width: ${BREAKPOINT}px) {
+    font-size: 1.5rem;
+    height: 17rem;
+  }
+`
+
+export const ContentBoxContainer = styled.div`
+  width: 5rem;
+  text-align: center;
+
+  @media screen and (min-width: ${BREAKPOINT}px) {
+    width: 6rem;
+  }
+`;
 
 export const ContentBox = styled.div<ContentBoxProps>`
   font-size: 1.5rem;
@@ -136,18 +153,58 @@ export const ContentBox = styled.div<ContentBoxProps>`
 
   background-color: black;
   color: ${(props) => (props.color ? props.color : "white")};
+  
+  @media screen and (min-width: ${BREAKPOINT}px) {
+    font-size: 2rem;
+  }
 `;
 
 export const ContentMessageContainer = styled.div`
-  margin-top: 0.3rem;
+  margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 `;
 
 export const ContentMessageTitle = styled.div`
   text-align: center;
   font-size: 1.3rem;
+  
+  @media screen and (min-width: ${BREAKPOINT}px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const ContentMessageDescription = styled.div`
   text-align: center;
+  font-size: 1rem;
+  
+  @media screen and (min-width: ${BREAKPOINT}px) {
+    font-size: 1.3rem;
+  }
+`;
+
+export const JoinButton = styled.a`
+  background-color: #c4201f;
+  border-radius: 20rem;
+  border: 6px solid ${THEME.topDark};
+  font-size: 3rem;
+  text-decoration: none;
+  letter-spacing: 0.3rem;
+  transition: all 0.2s ease;
+  padding: 2rem;
+  outline: none;
+  color: ${THEME.topDark};
+  box-shadow: 0 -3rem 0 1rem #a01928 inset;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  &:hover {
+    opacity: 0.7;
+    transform: scale(0.9);
+  }
+  @media screen and (min-width: ${BREAKPOINT}px) {
+    margin-top: 8rem;
+  }
 `;
