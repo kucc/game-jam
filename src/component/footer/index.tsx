@@ -5,7 +5,7 @@ import * as S from "./styles";
 const Footer: React.FC = () => {
   return (
     <S.Footer>
-      <S.Container></S.Container>
+      <S.Container>riverandeye | r-4bb1t</S.Container>
     </S.Footer>
   );
 };
