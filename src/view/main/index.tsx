@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
+
+import Snackbar from "../../component/snackbar";
 
 import * as S from "./styles";
 import { FONT_COLOR } from "../../constant";
 
 const Main: React.FC = () => {
+  const [isActive, setIsActive] = useState(false);
   return (
     <S.Main>
       <S.Container>
@@ -23,7 +26,8 @@ const Main: React.FC = () => {
               </S.ContentBoxContainer>
               <S.ContentMessageContainer>
                 <S.ContentMessageTitle>
-                  2020.11.06(금) 18:00<br/>~  2020.11.07(토) 09:00
+                  2020.11.06(금) 18:00
+                  <br />~ 2020.11.07(토) 09:00
                 </S.ContentMessageTitle>
                 <S.ContentMessageDescription>
                   ※ 공식 행사 시간은 상기와 같지만, 부분적으로 참여하셔도 무관합니다.
@@ -36,7 +40,8 @@ const Main: React.FC = () => {
               </S.ContentBoxContainer>
               <S.ContentMessageContainer>
                 <S.ContentMessageTitle>
-                안암 캐치카페 및 동아리방 (예정)
+                  고려대학교 신공학관 및<br />
+                  KUCC 동아리방
                 </S.ContentMessageTitle>
               </S.ContentMessageContainer>
             </S.FlexContainer>
@@ -45,7 +50,7 @@ const Main: React.FC = () => {
                 <S.ContentBox color={FONT_COLOR.theme}>주제</S.ContentBox>
               </S.ContentBoxContainer>
               <S.ContentMessageContainer>
-                <S.ContentMessageTitle>함께</S.ContentMessageTitle>
+                <S.ContentMessageTitle>“함께”</S.ContentMessageTitle>
               </S.ContentMessageContainer>
             </S.FlexContainer>
             <S.FlexContainer>
@@ -53,13 +58,20 @@ const Main: React.FC = () => {
                 <S.ContentBox color={FONT_COLOR.personnel}>인원</S.ContentBox>
               </S.ContentBoxContainer>
               <S.ContentMessageContainer>
-                <S.ContentMessageTitle>
-                  개인 혹은 3인 이하 팀
-                </S.ContentMessageTitle>
+                <S.ContentMessageTitle>개인 혹은 3인 이하 팀</S.ContentMessageTitle>
               </S.ContentMessageContainer>
             </S.FlexContainer>
           </S.ContentContainer>
-          <S.JoinButton href="https://forms.gle/9KpXESRkgDEsta9B7">참가 신청</S.JoinButton>
+          <S.SnackbarContainer>
+            <Snackbar isActive={isActive} setIsActive={setIsActive} message="신청이 마감되었습니다." />
+          </S.SnackbarContainer>
+          <S.JoinButton
+            onClick={() => {
+              setIsActive(true);
+            }}
+          >
+            참가 신청
+          </S.JoinButton>
         </S.InnerBox>
       </S.Container>
     </S.Main>
